@@ -7,7 +7,7 @@ async function fetchRandomUserData() {
 
     const data = await response.json();
     const user = data.results[0];
-    const name = `${user.name.first} ${user.name.last}`;
+    const name = `${user.name.title} ${user.name.first} ${user.name.last}`;
     const email = user.email;
 
     return { name, email };
